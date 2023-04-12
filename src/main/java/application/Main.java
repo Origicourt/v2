@@ -11,6 +11,11 @@ public class Main extends Application {
 
     public static Stage stage;
 
+    /**
+     *
+     * @param mystage
+     * @throws IOException erreur si chargement de la page n'est pas possible
+     */
     @Override
     public void start(Stage mystage) throws IOException {
         this.stage = mystage;
@@ -21,7 +26,12 @@ public class Main extends Application {
         stage.show();
     }
 
-
+    /**
+     *
+     * @param fxml
+     * @param controller
+     * @param title
+     */
     public static void change(String fxml, Object controller, String title){
         stage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxml+".fxml"));
